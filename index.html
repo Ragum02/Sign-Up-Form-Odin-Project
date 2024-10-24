@@ -22,26 +22,39 @@
             <div class="form-container">
                 <h1>Let's do This!</h1>
                 <fieldset>
+                    <section>
                     <p>
-                <label for="fname">FIRST NAME</label>
-                <input id="fname"></input>
-                <label>LAST NAME</label>
-                <input></input>
-                <label>EMAIL</label>
-                <input></input>
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="first_name" name="first_name" placeholder="" pattern="[A-ZÀ-Ÿ-a-zà-ÿ]{1,29}$" required></input>
+            </p>
+           <p>
+                <label for="mail"">EMAIL</label>
+                <input type="email" id="mail" name="mail" placeholder="example@example.ex" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required></input>
+            </p>
+            <p>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,20}$" required></input>
+                <p class="error_password">* Passwords do not match</p>
+            </p>
+        </section>
+        <section>
+            <p>
+                <label for="last_name">LAST NAME</label>
+                <input type="text" id="last_name" name="last_name" placeholder="" pattern="[A-ZÀ-Ÿ][a-zà-ÿ' -]{1,49}$" required></input>
+            </p>
+                <p>
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" placeholder="" pattern="^(\+?\d{1,3}[-. ]?)?(\(?\d{1,4}\)?[-. ]?)?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$" required></input>
                 </p>
                 <p>
-                <label>PHONE NUMBER</label>
-                <input></input>
-                <label>PASSWORD</label>
-                <input></input>
-                <label>CONFIRM PASSWORD</labek>
-                <input></input>
+                <label for="confirm_password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,20}$" required></input>
             </p>
+        </section>
                 </fieldset>
             </div>
             <div class="create">
-                <button>Create Account</button>
+                <button type="submit">Create Account</button>
                 <span>Already have an account? <a href="#">Log In</a></span>
             </div>
 

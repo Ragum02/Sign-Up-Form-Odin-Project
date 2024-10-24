@@ -8,16 +8,19 @@
     *{
         margin:0px;
         padding:0px;
+    }
 
-    }
-    body{
+    body{  
         display:flex;
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
     }
+
     #background{
-background-image: url(/asset/halie-west-25xggax4bSA-unsplash.jpg);
-background-size: cover;
-width: 30%;
-height: 100vh;
+        background-image: url(/asset/halie-west-25xggax4bSA-unsplash.jpg);
+        background-size: cover;
+        width: 65%;
+        height: 100vh;
     }
 
     #logo{
@@ -34,4 +37,97 @@ height: 100vh;
         align-items: center;
     }
 
+.main{  
+    width: 100vw;
+    background-color: whitesmoke;
+}
 
+.form-container{
+    background-color: white;
+    padding: 25px 75px;
+    box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.3);
+}
+
+fieldset{
+    border:none;
+    display: flex;
+    gap:75px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+fieldset p{
+    display:flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 12px;
+    margin-top:15px;
+}
+
+.intro{
+    font-size: 25px;
+    padding: 150px 75px 50px;
+    height:150px;
+}
+
+.intro p{
+    margin-bottom: 30px;
+}
+
+.create{
+    display: flex;
+    flex-direction: column;
+    margin:50px 75px;
+    gap:50px;
+}
+
+.create button{
+    color:white;
+    width: 225px;
+    height:40px;
+    font-size: 20px;
+    box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.3);
+    border:none;
+    border-radius: 10px;
+    background-color: #596D48; 
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+.create button:hover{
+transform:scale(1.2);
+}
+span a {
+    color: #596D48;
+    text-decoration: none;
+}
+input{
+    width: 250px;
+    padding:4px 5px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus{
+    transform: scale(1.1);
+    outline:none;
+    border: 1px solid blue !important;
+    box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.15);
+}
+input:valid{
+    border:1px solid green;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+    border: 1px solid red;
+  }
+.error_password{
+    color:red;
+    font-size: 12px;
+    display:none;
+}
+.error_password.show{
+    display:block;
+}
